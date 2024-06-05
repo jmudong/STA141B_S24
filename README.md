@@ -109,7 +109,25 @@ I will put code, notes, R sessions from live coding in class, etc. from the cour
 			   + get URL or HTML for the next page of results			   
 			   + fix/post-process the columns in the overall data.frame
 
-			   
+     + [Day 18](Lectures/Day18)
+	      + [GapMinder visualization](https://www.gapminder.org/tools/#$chart-type=bubbles&url=v2)
+		  + plotly example
+		     + [R code](Lectures/Day18/plotlyEg.R)
+			 + [HTML of plotly example](Lectures/Day18/simplePlotly.html)
+		  + [book chapter & plotly examples](https://rkabacoff.github.io/datavis/Interactive.html#plotly)
+		  + [plotly book](https://plotly-r.com/)
+          + [animated map & time series](Lectures/Day18/AnimatedMap)
+ 		     + [runnable version here](https://www.stat.ucdavis.edu/~duncan/VizEg/AnimatedCOVIDMap/animatedMap.html)
+	      + [D3 gallery](https://observablehq.com/@d3/gallery)
+
+     + [Day 19](Lectures/Day19)
+         + [Outline](Lectures/Day19/Outline.md)
+		 + [plotly output](Lectures/Day18/plotlySimple.html)
+         + [button and "dynamic" HTML tables](Lectures/Day19/buttonTable.html)		 
+         + [R-generated plotly plot with event handler - custom data](Lectures/Day19/handerl.R)
+         + [list as custom data](Lectures/Day19/cmplxCustomData.R)         
+
+
 <!-- 
      + [Day 15](Lectures/Day15)
 
