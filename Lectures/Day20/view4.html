@@ -1,0 +1,58 @@
+ <html>
+    <head>
+	<script type="text/javascript">
+	 function showCountyTimeSeries(png) {
+	     var el = document.getElementById('countySVG');
+	     var rx1 = /\.png/;
+	     var svg = png.replace(rx1, '.svg');
+	     var rx2 = /PNG\//;
+	     svg = svg.replace(rx2, 'SVG2/');
+	     console.log("showing " + svg);
+	     el.data = svg;
+	 }
+	</script>
+	<script type="text/javascript">
+	 function colorCounties(date) {
+	     let cases = getCasesByDate(date);
+	     let svg = document.getElementById('caCountyMap').getSVGDocument();
+	     for(let k in cases) {
+		 let p = svg.getElementById(k);
+		 p.style.fill = cases[k];
+	     }
+	 }	 
+	</script>
+	<script>
+	 function getCasesByDate(index) {
+	     return(countyCasesByDate[index]);
+	 }
+	</script>
+	<script type="text/javascript" src="countyCasesByDate.js"></script>
+    </head>
+    
+    <body>
+	<p>
+	    <ul>
+		<li>Click any of the counties to display a time series for just that county.</li>
+		<li>Click on a red point/circle in the time series for the county to
+		     display in the map the level of cases for each county for that day.</li>
+	    
+	</p>
+
+	<hr width="50%"></hr>	
+
+     <div style="display: flex;">
+	<div xwidth="45%" style="border: 1pt solid black;">
+	    <object type="image/svg+xml" data="ca.svg" id="caCountyMap">
+		Couldn't display SVG - fallback
+	    </object>
+	</div>
+	
+	<div xwidth="" style="border: 1pt solid black;">
+	    <object type="image/svg+xml" data="" id="countySVG">
+	    </object>	    
+	</div>
+    </div>
+	
+	
+</body>
+</html>
